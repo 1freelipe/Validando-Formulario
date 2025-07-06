@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --primary-color: linear-gradient(to right, #4b0082, #9b30ff);
+    --button-color: #104e81;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    background: linear-gradient(to right, #4b0082, #9b30ff);
+    height: 100vh;
+}
+
+.container {
+    max-width: 640px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.5); 
+    animation: fadeInUp 0.8s ease-out both;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form input, form label, form button {
+    display: block;
+    width: 100%;
+}
+
+form input {
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+form input::placeholder {
+    font-size: 18px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #9b30ff;
+    box-shadow: 0 0 5px #9b30ff;
+}
+
+form input:hover{
+    box-shadow: 1px 1px 7px 1px var(--button-color);
+}
+
+form button {
+    height: 40px;
+    border: none;
+    background: var(--primary-color);
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    margin-top: 30px;
+    transition: 0.3 ease;
+}
+
+form button:hover {
+    background: var(--button-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(178, 102, 255, 0.5);
+}
+
+form button:active {
+    background: var(--button-color);
+}
+
+form label {
+    font-size:22px;
+    margin: 10px 0 10px 0;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.error-text {
+    color: red;
+    font-size: 14px;
+}
+
+.sendForm {
+    padding: 10px;
+    border-radius: 12px;
+    color: inherit;
+    background: rgb(106, 235, 106);
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
